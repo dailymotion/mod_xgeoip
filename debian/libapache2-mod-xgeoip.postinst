@@ -1,0 +1,20 @@
+#!/bin/sh -e
+
+set -e
+
+#DEBHELPER#
+
+if [ "$1" != "configure" ]; then
+    exit 0
+fi
+
+if [ -n "$2" ]; then
+# we're upgrading, don't ask again
+    exit 0
+fi
+
+if [ -e /etc/apache2/apache2.conf ]; then
+    /usr/sbin/a2enmod mod-xgeoip || true
+fi
+
+exit 0

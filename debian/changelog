@@ -1,0 +1,17 @@
+mod-xgeoip (1.12-1) unstable; urgency=low
+
+  * Fix mod_cgi incompatibility (DAILY-1607)
+
+ -- Carlos Inacio <cinacio@dailymotion.com>  Wed, 21 Nov 2007 16:01:29 +0100
+
+mod-xgeoip (1.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien ESTIENNE <sebastien.estienne@gmail.com>  Tue, 31 Jul 2007 17:55:29 +0200
+
+mod-xgeoip (0.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Sebastien ESTIENNE <sebastien.estienne@gmail.com>  Thu, 26 Jul 2007 18:31:14 +0200

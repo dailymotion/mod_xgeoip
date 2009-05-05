@@ -1,0 +1,1 @@
+LoadModule xgeoip_module /usr/lib/apache2/modules/mod_xgeoip.so

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+#DEBHELPER#
+
+if [ "$1" != "remove" -a "$1" != "purge" ]; then
+	exit 0
+fi
+
+if [ -e /etc/apache2/apache2.conf ]; then
+	/usr/sbin/a2dismod mod-xgeoip || true
+fi
+
+exit 0
