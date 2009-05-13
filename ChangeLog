@@ -1,0 +1,29 @@
+2007-10-30 [Version 1.12 released]
+
+2007-10-30  Pierre-Yves Kerembelec <pyke@dailymotion.com>
+
+	* Fix module conflict with mod_cgi (and potentially others too)
+
+2007-09-28 [Version 1.11 released]
+
+2007-09-28  Pierre-Yves Kerembelec <pyke@dailymotion.com>
+
+	* Fix XGEOIP cookie generation (AS name was not correctly encoded, leading to strange behaviour in IE)
+
+2007-07-30 [Version 1.10 released]
+
+2007-07-30  Pierre-Yves Kerembelec <pyke@dailymotion.com>
+
+	* Added support for multiple databases (to support for instance CITY, COUNTRY and ASNUM editions at the same time)
+
+	* Added support for ASNUM database
+
+2007-07-30  Pierre-Yves Kerembelec <pyke@dailymotion.com>
+
+	* Added database date output for all output formats
+
+2007-07-23 [Version 1.00 released]
+
+2007-07-23  Pierre-Yves Kerembelec <pyke@dailymotion.com>
+
+	* Initial coding
