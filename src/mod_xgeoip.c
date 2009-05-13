@@ -1,5 +1,10 @@
-// eXtended GeoIP Apache2 module
-// 2007/04 py.kerembellec@gmail.com
+/*
+ * eXtended GeoIP Apache1 module
+ * 2007/04 pyke@dailymotion.com
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 // Mandatory includes
 #include <httpd.h>

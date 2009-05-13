@@ -1,3 +1,11 @@
+2009-05-13 [Version 1.13 released]
+
+2009-05-13  Olivier Poitrey <rs@dailymotion.com>
+
+	* Migrate code from dmcode shared repository to dedicated .git
+
+	* Add documentation to the source code
+
 2007-10-30 [Version 1.12 released]
 
 2007-10-30  Pierre-Yves Kerembelec <pyke@dailymotion.com>
