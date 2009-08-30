@@ -1,2 +1,2 @@
-debian/mod-xgeoip.load /etc/apache2/mods-available
-debian/mod-xgeoip.conf /etc/apache2/mods-available
+debian/xgeoip.load /etc/apache2/mods-available
+debian/xgeoip.conf /etc/apache2/mods-available

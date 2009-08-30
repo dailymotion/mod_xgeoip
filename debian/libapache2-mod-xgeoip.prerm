@@ -9,7 +9,7 @@ if [ "$1" != "remove" -a "$1" != "purge" ]; then
 fi
 
 if [ -e /etc/apache2/apache2.conf ]; then
-	/usr/sbin/a2dismod mod-xgeoip || true
+	/usr/sbin/a2dismod xgeoip || true
 fi
 
 exit 0

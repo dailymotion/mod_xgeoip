@@ -14,7 +14,7 @@ if [ -n "$2" ]; then
 fi
 
 if [ -e /etc/apache2/apache2.conf ]; then
-    /usr/sbin/a2enmod mod-xgeoip || true
+    /usr/sbin/a2enmod xgeoip || true
 fi
 
 exit 0
