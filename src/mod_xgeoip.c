@@ -20,7 +20,7 @@
 #include "mod_xgeoip.h"
 
 // Defines
-#define MODULE_VERSION              "1.12"
+#define MODULE_VERSION              "1.13"
 
 #define CONFIGURATION_ENABLE        "XGeoIP"
 #define CONFIGURATION_MODE          "XGeoIPMode"
