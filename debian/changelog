@@ -1,3 +1,9 @@
+mod-xgeoip (1.13-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Carlos Inacio <cinacio@gmail.com>  Sun, 30 Aug 2009 19:11:12 +0200
+
 mod-xgeoip (1.12-1) unstable; urgency=low
 
   * Fix mod_cgi incompatibility (DAILY-1607)

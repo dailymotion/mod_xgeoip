@@ -2,12 +2,12 @@ Source: mod-xgeoip
 Section: web
 Priority: optional
 Maintainer: Sebastien ESTIENNE <sebastien.estienne@gmail.com>
-Build-Depends: debhelper (>= 5.0.0), autotools-dev, apache2-prefork-dev | apache2-threaded-dev
+Build-Depends: debhelper (>= 5.0.0), apache2-prefork-dev | apache2-threaded-dev
 Standards-Version: 3.6.2
 
 Package: libapache2-mod-xgeoip
 Architecture: any
-Depends: ${shlibs:Depends}, apache2-common
+Depends: ${shlibs:Depends}, apache2-common | apache2.2-common
 Description: Apache 2 module which adds MaxMind GeoIP support 
  mod_xgeoip is an Apache HTTPD module which adds MaxMind GeoIP support
 
