@@ -1,3 +1,9 @@
+mod-xgeoip (1.14-1) unstable; urgency=low
+
+  * Do not resend the XGEOIP cookie if a valid signed cookie was sent by the client
+
+ -- Pierre-Yves Kerembellec <pyke@dailymotion.com>  Mon, 07 Dec 2009 18:24:35 +0100
+
 mod-xgeoip (1.13-1) unstable; urgency=low
 
   * New upstream release

@@ -20,7 +20,7 @@
 #include "mod_xgeoip.h"
 
 // Defines
-#define MODULE_VERSION              "1.13"
+#define MODULE_VERSION              "1.14"
 
 #define CONFIGURATION_ENABLE        "XGeoIP"
 #define CONFIGURATION_MODE          "XGeoIPMode"
@@ -60,6 +60,7 @@ typedef struct
     unsigned int  remote;
     unsigned int  proxy;
     int           found;
+    int           valid;
     int           country_index;
     char          country_code2[3];
     char          country_code3[4];
@@ -586,6 +587,7 @@ static int xgeoip_lookup_from_cookie(xgeoip_configuration *configuration, const 
         return 0;
     }
     lookup->found = 0;
+    lookup->valid = 0;
     memset(cookies, 0, sizeof(cookies));
     strncpy(cookies, input, sizeof(cookies) - 1);
     cookie_length = strlen(configuration->cookie_name);
@@ -602,9 +604,11 @@ static int xgeoip_lookup_from_cookie(xgeoip_configuration *configuration, const 
     {
         return 0;
     }
+    lookup->valid = 1;
     cookie += cookie_length + 1;
     if(configuration->cookie_key[0] != 0)
     {
+        lookup->valid = 0;
         if(strlen(cookie) < 17)
         {
             return 0;
@@ -629,6 +633,7 @@ static int xgeoip_lookup_from_cookie(xgeoip_configuration *configuration, const 
             return 0;
         }
         cookie += 17;
+        lookup->valid = 1;
     }
     field = strtok_r(cookie, ":", &last);
     while(field)
@@ -854,7 +859,7 @@ static int xgeoip_post_read_request(request_rec *request)
              xgeoip_lookup_from_database(configuration, count, &lookup);
         }
     }
-    if(configuration->cookie_enabled)
+    if(configuration->cookie_enabled && ! lookup.valid)
     {
         if(xgeoip_build_cookie(configuration, &lookup, content, sizeof(content)))
         {
