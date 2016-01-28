@@ -371,7 +371,7 @@ static int xgeoip_lookup_init(request_rec *request, const xgeoip_configuration *
     }
     else
     {
-        lookup->remote = inet_addr(request->connection->remote_ip);
+        lookup->remote = inet_addr(request->connection->client_ip);
         if(configuration->proxy_header[0])
         {
             header = apr_table_get(request->headers_in, configuration->proxy_header);
